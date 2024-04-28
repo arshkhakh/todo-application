@@ -46,3 +46,4 @@ function delete_button(event){
 // 2 changes are required
 // a. press Enter will type in the activity
 // b. we should keep getting "type any activity" on repetition
+// test
