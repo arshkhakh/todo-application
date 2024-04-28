@@ -1,3 +1,5 @@
+
+
 let btn = document.getElementById("btn")
 let input = document.getElementById("input")
 // let new_ul = document.getElementById("ul")
@@ -40,3 +42,7 @@ function delete_button(event){
         node_name.remove()
     }
 };
+
+// 2 changes are required
+// a. press Enter will type in the activity
+// b. we should keep getting "type any activity" on repetition
