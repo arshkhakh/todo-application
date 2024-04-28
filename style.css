@@ -1,0 +1,27 @@
+h1 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 35px;
+    font-variation-settings:
+  "wdth" 104;
+}
+
+input {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-variation-settings:
+  "wdth" 104;
+}
+
+li {
+    font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+  font-variation-settings:
+  "wdth" 93.6;
+  font-size: 18px;
+}
+
+button {
+    font-size: 16px;
+}
