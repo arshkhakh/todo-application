@@ -1,29 +1,23 @@
+let input = document.querySelector('input');
+let ul = document.querySelector('ul')
+let btn = document.getElementById('btn')
+let li = document.createElement('li') 
 
+btn.addEventListener("click", click_function)
 
-let btn = document.getElementById("btn")
-let input = document.getElementById("input")
-// let new_ul = document.getElementById("ul")
-// let create_btn = document.createElement("button")
-// let new_li = document.createElement("li")
-let del_btn = document.querySelector(".del")
-let ul = document.querySelector("ul")
+function click_function(){
+    li.innerHTML = input.value + " "
+    let delBtn = document.createElement('button')
+    delBtn.innerText = 'delete'
+    delBtn.classList.add('delete')
 
+    // avoid giving space after input.value which will keep the palceholder as it is.
+    li.appendChild(delBtn);
+    ul.appendChild(li);
+    input.value = "";
+}
 
-btn.addEventListener("click", add_list);
-
-function add_list(){
-    let new_li = document.createElement("li")
-    let new_ul = document.getElementById("ul")
-    let create_btn = document.createElement("button")
-    new_li.innerHTML = input.value + " ";
-    create_btn.innerHTML = "Delete";
-    new_ul.appendChild(new_li)
-    new_li.appendChild(create_btn)
-    input.value = " ";
-};
-
-
-ul.addEventListener("click", delete_button);
+ul.addEventListener('click', remove_function)
 
 // event is a default parameter
 // event.target is a special property within event
@@ -34,16 +28,17 @@ ul.addEventListener("click", delete_button);
 # console.log(event.target)
 # console.dir(event.target.nodeName) */
 
-function delete_button(event){
-    console.log(event.target)
-    console.dir(event.target)
-    if (event.target.nodeName == "BUTTON"){
-        let node_name = event.target.parentElement
-        node_name.remove()
-    }
-};
 
 // 2 changes are required
 // a. press Enter will type in the activity
 // b. we should keep getting "type any activity" on repetition
 // test
+function remove_function(event){
+    console.log(event.target.nodeName)
+    console.dir(event.target)
+    if (event.target.nodeName == 'BUTTON'){
+        let parent = event.target.parentElement;
+        parent.remove()
+    }
+};
+
